@@ -1,0 +1,689 @@
+:root {
+    --primary: #000000;
+    --bg: #000000;
+}
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth; /* Menghapus kemungkinan space putih di kanan web */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Arial';
+    background-color: #ffffff;
+    align-items: center;
+    max-width: 100%;
+    margin: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem;
+    background-color: #FEF10C;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo {
+    font-family: 'Arial Black', sans-serif;
+    font-style: italic;
+    font-size: 28px;
+    font-weight: 900;
+    color: white;
+    /* Memberikan efek outline/stroke hitam */
+    -webkit-text-stroke: 2px black;
+    letter-spacing: 1px;
+transform: scaleY(1.2);
+}
+
+
+
+
+.navbar .navbar-nav a {
+    color: #000000;
+    display: inline-block;
+    font-size: 1.1rem;
+    margin: 0.5rem;
+    font-family: 'Arial Black';
+    transform: scaleY(1.2);
+}
+
+.navbar .navbar-nav a:hover {
+    color: #ffffff;
+}
+
+.navbar .navbar-extra a {
+    color: #fbfbfb;
+    margin: 0 0.5rem;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+
+#star {
+    display: none;
+}
+
+/* ATAP */
+
+.atap {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.atap-blue {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, blue, darkblue);
+  clip-path: (0 100%, 50% 0, 100% 100%);
+}
+
+.atap-yellow {
+  position: absolute;
+  display: block;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(to bottom, #fbfbfb, yellow); 
+  clip-path: polygon(0 60%, 50% 0, 100% 60%);
+  top: 5rem;
+  right: -9.5rem;
+  margin-bottom: -5px;
+}
+
+.hero-text{
+  text-align: center;
+    color: #ff0055; /* Warna Pink/Merah sesuai gambar */
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1.2;
+    margin-top: 20px;
+    transform: scaleY(1.2);
+}
+/* herooo bukan hero emel */
+
+.hero-container {
+  display: grid;
+  /* Pilar samping 50px, tengah fleksibel (1fr) */
+  grid-template-columns: 40px 1fr 40px;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: #fdf5e6; 
+  margin-top: -5px;/* Warna krem dasar */
+}
+
+.pillar-right {
+  /* Putih mulai dari 0% sampai 10%, lalu gradasi ke merah sampai 100% */
+  background: linear-gradient(to left, #ffffff 5%, #ff0c29 95%);
+  height: auto;
+  
+}
+
+.pillar-left{
+  /* Putih mulai dari 0% sampai 10%, lalu gradasi ke merah sampai 100% */
+  background: linear-gradient(to right, #ffffff 5%, #ff0c29 95%);
+  height: auto;
+  
+}
+
+.main-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Masukkan SVG kamu sebagai background */
+  background-image: url('img/bg1.svg');
+  background-size: cover;
+}
+
+/* Kotak Biru / Video */
+.video-wrapper {
+  position: relative;
+  width: 70%; /* Atur lebar layar video */
+  aspect-ratio: 16 / 9; /* Menjaga bentuk video tetap proporsional */
+  background: blue; /* Fallback warna biru */
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  overflow: visible; /* Biar badge bisa nongol keluar dikit */
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  border: none;
+}
+
+/* Badge Kuning TOBO */
+.tobo-badge {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background-image: url('img/Sticker.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  bottom: 20px;
+  left: -40px;
+}
+/* herooo bukan hero emel suud */
+
+/* abouttoboooo;( */
+
+/* Container Utama Seksi */
+.section-divider {
+  width: 100%;
+  height: 25px; /* Sesuaikan ketebalan garis di gambar */
+  background-color: #fef10c; /* Kuning terang */
+  position: relative;
+  z-index: 999;
+  top: 0;
+   /* Supaya di atas background pilar merah */
+}
+
+.label-container {
+  /* Tarik papan ke atas supaya nempel/overlap garis kuning */
+  /* Sesuaikan angkanya (misal -40px atau -50px) sampai pas nempel */
+  margin-top: 0px; 
+  z-index: 30; /* Harus lebih tinggi dari divider dan video */
+  position: relative;
+}
+
+.tobo-svg-label {
+  width: 300px; /* Ukuran dari Figma */
+  height: auto;
+  display: block;
+}
+
+
+.about-section {
+  width: 100%; /* Atur lebar seksi konten kamu */
+  min-height: 100vh;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  background-image: url('img/bg2.svg');/* Tombol dan Kotak di tengah */
+  overflow: visible;
+  position: relative;
+}
+
+/* Kotak Putih Konten */
+
+
+/* maskot */
+.maskot {
+  position: absolute;
+  left: 10%;
+  width: 350px; /* fix ukuran biar stabil */
+  height: auto;
+  cursor: pointer;
+}
+
+/* teks */
+
+.tobo-textbox img {
+  padding: 35px 40px;
+  margin-top: 0%;
+  margin-left: 500px; 
+  width: 55%;
+  /* kasih jarak dari maskot */
+}
+
+/* container posisi (atur relatif ke layout kamu) */
+.connector-dots {
+  position: absolute;
+  left: 32%;   /* geser sesuai posisi antara logo & textbox */
+  top: 65%;
+  transform: translate(-50%, -50%);
+}
+
+/* base dot */
+.dotbig, .dotsmall {
+  position: absolute;
+  background: #ffffff;
+  border-radius: 50%;
+  
+  /* shadow biar sama kayak textbox */
+  box-shadow: 
+    0 6px 12px rgba(0,0,0,0.15),
+     0 2px 4px rgba(100, 96, 96, 0.6);
+    z-index: 1000;
+}
+
+/* buletan besar */
+.dotsmall {
+  width: 5rem;
+  height: 5rem;
+  left: 0;
+  top: 0;
+}
+
+/* buletan kecil */
+.dotbig {
+  width: 8rem;
+  height: 8rem;
+  left: 5.5rem;  /* jarak antar bulatan */
+  top: 12px;   /* sedikit turun biar diagonal */
+}
+
+.pillarkiri {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 40px;
+  height: 100%;
+
+  background: linear-gradient(to right, #ffffff 5%, #ff0c29 95%);
+  z-index: 10;
+}
+
+.pillarkanan {
+  position: absolute;
+  top: 0;
+  right: 40px;
+
+  width: 40px;
+  height: 100%;
+
+  background: linear-gradient(to left, #ffffff 5%, #ff0c29 95%);
+  z-index: 10;
+}
+/* cerita suud */
+
+/* galeriiii */
+.section-divider {
+  width: 100%;
+  height: 25px; /* Sesuaikan ketebalan garis di gambar */
+  background-color: #fef10c; /* Kuning terang */
+  position: relative;
+  z-index: 20; 
+  top: 0;/* Supaya di atas background pilar merah */
+}
+.label-container {
+  margin-top: 0px; 
+  z-index: 30; /* Harus lebih tinggi dari divider dan video */
+  position: relative;
+}
+
+.galeri-label {
+  width: 300px; /* Ukuran dari Figma */
+  height: auto;
+  display: block;
+}
+
+
+.galeri {
+  width: 100%; /* Atur lebar seksi konten kamu */
+  min-height: 100vh;
+  margin-top: 0;
+  flex-direction: column;
+  align-items: center; 
+background-image: url('img/bg3.svg');
+display: flex;
+overflow: hidden;
+}
+
+
+.carousel-container {
+  display: flex;
+  gap: 10rem; /* Jarak antar kartu */
+  overflow-x: auto; /* Bisa scroll horizontal */
+  padding: 80px 5%; /* Padding samping biar kartu nggak nempel pilar */
+  scroll-snap-type: x mandatory; /* Biar scroll-nya 'berhenti' pas di tengah kartu */
+  scrollbar-width: none; /* Sembunyikan scrollbar di Firefox */
+  grid-column: 3; /* Biar dia cuma ada di kolom tengah, di antara pilar */
+  width: 100%; 
+  /* Dia akan mengikuti lebar kolom tengah saja */
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none; /* Sembunyikan scrollbar di Chrome/Safari */
+}
+
+.learning-card {
+  flex-shrink: 0; /* WAJIB: Biar kartu nggak menciut */
+  width: 350px; /* Lebar satu kartu */
+  text-align: center;
+  scroll-snap-align: center; 
+  cursor: pointer;
+  /* Efek magnet pas nge-scroll */
+}
+
+.learning-card img {
+  width: 350px;
+  display: block;
+  margin: 0 auto;
+}
+
+.learning-card h3 {
+  margin-top: 14px;
+  font-size: 18px;
+  color: #d62828;
+  text-shadow: 
+    0 2px 2px rgba(0,0,0,0.2),
+    0 6px 8px rgba(0,0,0,0.15);
+}
+
+.learning-card p {
+  font-size: 14px;
+  color: #ff6b6b;
+  margin-top: 6px;
+}
+.learning-card:hover .lego-frame {
+  transform: scale(1.05);
+}
+
+.learning-card:hover {
+  transform: translateY(-6px);
+  transition: 0.3s ease;
+}
+/* BACKDROP */
+/* Styling Body & Container
+
+/* Background Modal (Gelap Transparan) */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+.modal.show{
+  display: flex;
+}
+/* Kotak Putih Pop-up */
+.modal-content {
+    background: linear-gradient(to bottom, #ffffff, #ffcbcb);
+    padding: 30px;
+    border-radius: 25px;
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    animation: fadeIn 0.4s;
+    font-family: 'Arial';
+}
+
+/* Animasi Muncul */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Tombol Close Bundar Merah */
+.close-btn {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background-color: #ff0033;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 3px solid white;
+}
+
+/* Styling Teks Dalam Pop-up */
+#modal-title {
+    color: #c00;
+    text-decoration: underline;
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+#modal-subtitle {
+    font-style: italic;
+    margin-bottom: 5px;
+    font-size: 25px;
+    letter-spacing: -0.3px;
+    margin-top: 15px;
+    transform: scaleY(1.2);
+}
+
+#modal-desc {
+    line-height: 1;
+    color: #000000;
+    font-size: 25px;
+    text-align: justify;
+    display: inline-block;
+    transform: scaleY(1.2);
+    letter-spacing: -0.3px;
+    padding: 20px;
+}
+.tools-section{
+  display: flex;
+  align-items: center; /* biar sejajar tengah */
+  gap: 10px; /* jarak teks & icon */
+  justify-content: flex-start; /* rata kiri */
+  margin-bottom: 10px;
+}
+.tools-icon {
+    width: 70px;
+    margin-top: 7px;
+}
+.tools-section p{
+  font-family: 'Arial';
+  font-weight: bold;
+  font-style: italic;
+  color: #c00;
+  margin: 0;
+  font-size: 35px;
+}
+
+/*team ngezzz*/
+
+
+
+/*team lese*/
+
+/*footeryey*/
+footer {
+    background-color: #2424ff;
+    text-align: center;
+    height: 3rem;
+}
+
+
+  footer .links a {
+      color: #ffffff;
+      padding: 1rem 1rem;
+      font-size: 2rem;
+      display: inline;
+      margin-top: 10px;
+      font-family: 'Arial';
+      font-weight: bold;
+      transform: translateY(1.2rem);
+  }
+@media (max-width: 768px) {
+  .navbar-nav {
+    position: fixed;
+    top: 0;
+    right: -100%; /* awalnya disembunyiin */
+    height: 100vh;
+    width: 100px;
+    background: #fef10c;
+    flex-direction: column;
+    padding-top: 60px;
+    transition: 0.3s;
+  }
+  .navbar-nav.active {
+    right: 0; /* muncul dari kanan */
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+    .logo {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    /* 2. Segitiga: Kita buat bentuknya lebih lebar di mobile */
+    .atap {
+        height: 250px; /* Batasi tinggi hero di mobile */
+        background: #0000ff; /* Warna biru background */
+        display: flex;
+        justify-content: center;
+        align-items: flex-end; /* Taruh segitiga di bawah */
+    }
+
+    .atap-yellow {
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(0% 100%, 50% 45%, 100% 100%);
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 5px;
+        right: 0px;
+        
+    }
+
+    /* 3. Teks di dalam Segitiga: Perkecil sizenya */
+    .hero-text {
+        font-size: 17px !important;
+        width: 90%;
+        margin-top: 130px; /* Dorong dikit ke bawah puncak segitiga */
+    }
+.hero-container{
+  grid-template-columns: 20px 1fr 20px;
+  margin-top: 0;
+  height: 30vh;
+}
+    /* 4. Pilar Merah: Buat sangat tipis di sisi layar */
+    .pillar-left {
+        width: 20px !important; 
+        background: linear-gradient(to right, #ffffff 2%, #ff0c29 95%);
+    }
+    .pillar-right{
+       width: 20px !important; 
+        background: linear-gradient(to left, #ffffff 2%, #ff0c29 95%);
+    
+    }
+    .main-content{
+      display: flex;
+      align-items: flex-start;
+      height: 30vh;
+  
+    }
+
+    .video-wrapper {
+        width: 85%;
+        height: auto;
+        aspect-ratio: 16 / 9; 
+        margin: 10px auto;
+        position: relative;
+        left: 0 !important;
+        transform: none !important;
+        top: 30px;
+    }
+
+    .tobo-badge {
+        width: 80px;
+        height: 80px;
+        font-size: 8px;
+        left: -15px;
+        top: 130px;
+    }
+    
+    
+
+    .maskot{
+      width: 30%;
+      margin-top: 5%;
+    }
+
+    .tobo-textbox img{
+      padding: 10px 5px;
+  margin-top: 5%;
+  margin-left: 170px; 
+  width: 50%;
+    }
+    .connector-dots {
+  position: absolute;
+  left: 38%;   /* geser sesuai posisi antara logo & textbox */
+  top: 22%;
+  transform: translate(-50%, -50%);
+}
+.dotsmall {
+  width: 10px;
+  height: 10px;
+  left: 0;
+  top: 0;
+}
+
+.dotbig {
+  width: 20px;
+  height: 20px;
+  left: 5px;  /* jarak antar bulatan */
+  top: 12px;   /* sedikit turun biar diagonal */
+}
+.pillarkiri {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 20px;
+  height: 100%;
+
+  background: linear-gradient(to right, #ffffff 3%, #ff0c29 98%);
+  z-index: 10;
+}
+
+.pillarkanan {
+  position: absolute;
+  top: 0;
+  right: 0px;
+
+  width: 20px;
+  height: 100%;
+
+  background: linear-gradient(to left, #ffffff 3%, #ff0c29 98%);
+  z-index: 99;
+}
+.about-section{
+    max-height: 40vh;
+}
+
+}

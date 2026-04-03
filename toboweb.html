@@ -1,0 +1,364 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+    <title>Tobo Studio</title>
+    <link rel="stylesheet" href="toboweb.css"/>
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="img"/>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+     <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bentham&family=Birthstone&family=Cinzel:wght@400..900&family=Luxurious+Script&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- navbar start -->
+  <nav class="navbar">
+    <a href="#" class="navbar-logo">TOBO STUDIO</a>
+
+    <div class="navbar-nav" id="navbarNav">
+      <a href="#about">About</a>
+      <a href="#galeri">Gallery</a>
+      
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+    ☰
+  </div>
+  </nav>
+
+<!--navbar end-->
+  <section class="atap">
+    <div class="atap-blue"></div>
+    <div class="atap-yellow">
+        <div class="hero-text">
+            UI's<br>
+            1st Toys & Bricks<br>
+            Development Mini Studio!
+        </div>
+    </div>
+  </section>
+<!--hirow-->
+<main class="page-wrapper">
+  <section class="hero-container">
+  <div class="pillar-left"></div>
+
+  <div class="main-content">
+    <div class="svg-bg"></div>
+    
+    <div class="video-wrapper">
+      <iframe src="https://youtu.be/embed/rrLJ5IhjCEI" allowfullscreen></iframe>
+      
+      <div class="tobo-badge">
+      </div>
+    </div>
+  </div>
+
+  <div class="pillar-right"></div>
+</section>
+    <!--hirowabies-->
+  
+    <!--about-->
+
+
+<section id="about" class="about-section">
+  <div class="section-divider"></div>
+  <div class="label-container">
+    <img src="img/tobo label.svg" class="tobo-svg-label" alt="About Tobo Label">
+  </div>
+  <div class="pillarkiri"></div>
+  <div class="mascot">
+    <a href="https://www.instagram.com/studio.tobo/" target="_blank">
+     <img src="img/logo tobo 2.svg" class="maskot" alt="Kambing Tobo">
+    </a> 
+  </div>
+  <div class="tobo-textbox">
+    <img src="img/about tobo.svg" alt="aboutobo">
+  </div>
+  <div class="connector-dots">
+      <span class="dotbig"></span>
+      <span class="dotsmall"></span>
+  </div>
+</section>
+    <!--aboutabies-->
+    <!--produksiee-->
+
+<section id="galeri" class="galeri">
+  <div class="section-divider"></div>
+  <div class="label-container">
+    <img src="img/galerilabel.svg" class="galeri-label" alt="Gallery Label">
+  </div>
+
+  <div class="pillar-left"></div>
+  <div class="carousel-container">
+    <!--card 1-->
+    <div class="learning-card">
+      <div class="lego-frame">
+        <img src="img/lego.svg" alt="Designing Brick" 
+        class="open-modal"
+        data-title="DESIGNING BRICK"
+        data-subtitle="PROMED BRICKS"
+        data-desc="Farrand Farrel created Promed Bricks, a concept that uses bricks  
+        as a creative medium to represent the identity of Media Production specialities."
+         data-tools="img/kotak warna.svg" >
+        <h3>Designing Brick Character</h3>
+        <p>Click the image for further explanation!</p>
+      </div>
+    </div>
+    <div id="popupModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            
+            <h2 id="modal-title"></h2>
+            <p id="modal-subtitle"></p>
+            <p id="modal-desc"></p>
+            <div class="tools-section">
+                <p>TOOLS USED :</p>
+                <img id="modal-tools" src="img/kotak warna.svg" class="tools-icon">
+            </div>
+        </div>
+    </div>
+    <!--card 2-->
+    <div class="learning-card">
+      <div class="lego-frame">
+        <img src="img/boneka biru.svg" 
+     class="open-modal"
+     data-title="TOY BUSINESS"
+     data-subtitle="PYOYI PLUSHIE"
+     data-desc="This toy is called Pyoyi Plushie, created by Naila Aurellia.
+      It is a plush toy based on the Pyoyi IP character, the mascot for the 2024 UI Media Production Freshman Orientation."
+      data-tools="img/procreate.svg">
+        <h3>Toy Business</h3>
+        <p>Click the image for further explanation!</p>
+      </div>
+    </div>
+    <div id="popupModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            
+            <h2 id="modal-title"></h2>
+            <p id="modal-subtitle"></p>
+            <p id="modal-desc"></p>
+            <div class="tools-section">
+                <p>TOOLS USED :</p>
+                <img id="modal-tools" src="img/procreate.svg" class="tools-icon">
+            </div>
+        </div>
+    </div>
+    <!--card 3-->
+    <div class="learning-card">
+      <div class="lego-frame">
+        <img src="img/jakun.svg" alt="Designing Brick" 
+        class="open-modal"
+        data-title="DESIGNING UI BRICKS"
+     data-subtitle="UI BRICKS"
+     data-desc="Farrand Farrel created UI Bricks, a project that uses bricks as a medium to construct a bus inspired by the identity and almamater of Universitas Indonesia."
+     data-tools="img/ilustrator.svg">
+        <h3>Designing UI Bricks</h3>
+        <p>Click the image for further explanation!</p>
+      </div>
+    </div>
+    <div id="popupModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            
+            <h2 id="modal-title"></h2>
+            <p id="modal-subtitle"></p>
+            <p id="modal-desc"></p>
+          
+            <div class="tools-section">
+                <p>TOOLS USED :</p>
+                <img id="modal-tools" src="img/ilustrator.svg" class="tools-icon">
+            </div>
+            
+        </div>
+    </div>
+    <!--card 4-->
+    <div class="learning-card">
+      <div class="lego-frame">
+        <img src="img/monopoli.svg" alt="Designing Brick" class="open-modal"
+          data-title="DESIGNING BOARDGAME"
+     data-subtitle="PULICI BOARD GAME Hak Cipta Adventure"
+     data-desc="It is an interactive board game that teaches the importance of copyright through creative challenges, the legal use of works, and strategies for managing royalties. It was created by Salsabila N., Daidaban F., Nathania A., Damar S., and Akhdan K."
+     data-tools="img/ibis.svg">
+        <h3>Designing Boardgame</h3>
+        <p>Click the image for further explanation!</p>
+      </div>
+    </div>
+    <div id="popupModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            
+            <h2 id="modal-title"></h2>
+            <p id="modal-subtitle"></p>
+            <p id="modal-desc"></p>
+            <div class="tools-section">
+                <p>TOOLS USED :</p>
+                <img id="modal-tools" src="img/ilustrator.svg" class="tools-icon">
+            </div>
+            
+        </div>
+    </div>
+    <!--card 5-->
+    <div class="learning-card">
+      <div class="lego-frame">
+        <img src="img/tiduran.svg" alt="Designing Brick" class="open-modal"
+         data-title="DEVELOPING CHARACTERS & STORY"
+     data-subtitle="GERI AND THE PRODUCKTIVE DUO"
+     data-desc="Ataya Nasywa, Anastacia Carolyn, Archiello Putra, and Tania Putri as IP Conceptor develops original ideas for the toy by creating unique characters, stories, and concepts that give the product its identity and appeal."
+      >
+        <h3>Developing Character & Story</h3>
+        <p>Click the image for further explanation!</p>
+      </div>
+    </div>
+    <div id="popupModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            
+            <h2 id="modal-title"></h2>
+            <p id="modal-subtitle"></p>
+            <p id="modal-desc"></p>
+            
+            
+        </div>
+    </div>
+    <!--card 6-->
+    <div class="learning-card">
+      <div class="lego-frame">
+        <img src="img/boardgame.svg" alt="Designing Brick"
+        class="open-modal"
+          data-title="DESIGNING BOARDGAME"
+     data-subtitle="PETAK SRIKANDI"
+     data-desc="It is an interactive board game that takes players on a journey through time to learn about and appreciate Indonesia’s female heroes. Created by toy designers Nasya Aulia, Farra Khansa, Rr. Jasmine, Vidynta Shafa, and Fathimah Zahra"
+     data-tools="img/figma.svg">
+        <h3>Designing Boardgame</h3>
+        <p>Click the image for further explanation!</p>
+      </div>
+    </div>
+    <div id="popupModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            
+            <h2 id="modal-title"></h2>
+            <p id="modal-subtitle"></p>
+            <p id="modal-desc"></p>
+            <div class="tools-section">
+                <p>TOOLS USED :</p>
+                <img id="modal-tools" src="img/figma.svg" class="tools-icon">
+            </div>
+        </div>
+    </div>
+    <!--card 7-->
+    <div class="learning-card">
+      <div class="lego-frame">
+        <img src="img/3d kucing.svg" alt="Designing Brick"
+        class="open-modal"
+          data-title="3D TOY MANUFACTURING"
+     data-subtitle=""
+     data-desc="Focuses on turning concepts into products. Students learn how to design toys using simple digital tools and create them using methods like 3D printing. They also learn about basic materials and how to make toys that are strong and safe to use."
+     data-tools="img/blender.svg">
+        <h3>3D Manufacturing</h3>
+        <p>Click the image for further explanation!</p>
+      </div>
+    </div>
+    <div id="popupModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            
+            <h2 id="modal-title"></h2>
+            <p id="modal-subtitle"></p>
+            <p id="modal-desc"></p>
+            <div class="tools-section">
+                <p>TOOLS USED :</p>
+                <img id="modal-tools" src="img/blender.svg" class="tools-icon">
+            </div>
+            
+        </div>
+    </div>
+    <!--card 8-->
+    <div class="learning-card">
+      <div class="lego-frame">
+        <img src="img/pony.svg" alt="Designing Brick"class="open-modal"
+          data-title="DESIGNING PACKAGING"
+     data-subtitle=""
+     data-desc="Focuses on creating packaging that is both attractive and meaningful for toys. In this course, students learn how to design packaging that protects the toy while also making it look appealing to users. They explore basic design elements such as color, layout, and branding, and learn how packaging can tell a story about the toy inside."
+     data-tools="img/ilustrator.svg">
+        <h3>Designing Packaging</h3>
+        <p>Click the image for further explanation!</p>
+      </div>
+    </div>
+    <div id="popupModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            
+            <h2 id="modal-title"></h2>
+            <p id="modal-subtitle"></p>
+            <p id="modal-desc"></p>
+            <div class="tools-section">
+            <div class="tools-section">
+                <p>TOOLS USED :</p>
+                <img id="modal-tools" src="img/photoshop.svg" class="tools-icon">
+            </div>
+            
+        </div>
+      </div>
+    <div class="learning-card">
+      <div class="lego-frame">
+        <img src="img/polarrr.svg" alt="Designing Brick" class="open-modal"
+          data-title="DESIGNING CHARACTERS"
+     data-subtitle="POLAR LAB BRICKS"
+     data-desc="Nabila Sungkar created Polar Lab Bricks, a concept that uses bricks as a creative medium to represent the identity of Polar Lab."
+     data-tools="img/ilustrator.svg">
+        <h3>Designing Brick Characters</h3>
+        <p>Click the image for further explanation!</p>
+      </div>
+    </div>
+    <div id="popupModal" class="modal">
+        <div class="modal-content">
+              <span class="close-btn">&times;</span>
+              
+              <h2 id="modal-title"></h2>
+              <p id="modal-subtitle"></p>
+              <p id="modal-desc"></p>
+            <div class="tools-section">
+                <p>TOOLS USED :</p>
+                <img id="modal-tools" src="img/ilustrator.svg" class="tools-icon">
+            </div>    
+        </div>
+    </div> 
+  <div class="pillar-right"></div>
+</section>
+
+
+    <!--footerzz-->
+
+    <footer>
+      
+      <div class="links">
+         <a href="https://www.google.com" class="btn-link">
+    Klik untuk lanjut!
+         </a>
+      </div>
+      
+      </div>
+    </footer>
+
+    <!--footerzzendd-->
+
+
+    <script>
+      feather.replace();
+    </script>
+
+  </main>
+  <script src="tobo.js"></script>
+</body>
+</html>
