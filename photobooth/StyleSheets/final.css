@@ -1,0 +1,212 @@
+/* body */
+body {
+  background-image: url('/Assets/tobo-photobooth/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #D5E8EB;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: 1rem 0 2rem;
+  gap: 0;
+ 
+}
+
+/* typography */
+h1 {
+  color: #555555;
+  font-family: Arial, serif;
+  font-size: 1 rem;
+  font-weight: 400;
+}
+
+p {
+  font-size: 0.5em;
+  color: #666;
+  margin-top: -8px;
+}
+
+/* logo */
+.logo {
+  position: relative;
+  width: 300px;
+}
+
+.logo img {
+  width: 100%;
+  height: 40%;
+}
+
+/* sticker container */
+.sticker-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 0.3vh;
+  margin-top: 0;
+  padding: 5;
+}
+
+/* canvas container */
+#canvasContainer {
+  position: relative;
+  margin-top: 20px;
+  width: 30vw;
+  max-width: 90vw;
+  aspect-ratio: 1176/1870;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  #canvasContainer {
+    width: 80vw;
+    max-width: 90vw;
+  }
+}
+
+/* canvas */
+canvas {
+  width: 100%;
+  height: 100%;
+  background: white;
+  cursor: grab;
+  display: block;
+  object-fit: cover;
+}
+
+/*  button container */
+.button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 2vh;
+}
+
+/* buttons */
+button {
+  font-family: Arial, serif;
+  font-size: 1 rem;
+  font-weight: 400;
+  color: var(--main-text);
+  background-color: #fbff00;
+  border: 1px solid #1e1e1e;
+  border-radius: 0.5rem;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  padding: 0.4rem 0.5rem;
+  margin-top: 10%;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* KATALOG STIKER */
+.sticker-catalog-wrapper {
+  width: 80vw;
+  max-width: 380px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 2px solid #1e1e1e;
+  border-radius: 12px;
+  padding: 15px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.catalog-hint {
+  font-size: 0.20rem;
+  color: #000000;
+  margin-bottom: 10px;
+  font-family: Arial ;
+  
+}
+
+
+.sticker-catalog {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  width: 100%;
+  overflow-x: auto; 
+  padding-bottom: 15px; 
+}
+
+
+.sticker-catalog::-webkit-scrollbar {
+  height: 8px;
+}
+.sticker-catalog::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+.sticker-catalog::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+.sticker-catalog::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Tampilan tiap item stiker di dalam katalog */
+.sticker-item {
+  height: 60px; /* besaran tombol stiker */
+  width: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  object-fit: contain;
+}
+
+.sticker-item:hover {
+  transform: scale(1.15);
+}
+
+.reset-catalog-btn {
+  margin-top: 15px;
+  background-color: #fbff00;
+  color: rgb(0, 0, 0);
+  border: 1px solid #1e1e1e;
+}
+
+/* heading content */
+.heading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 30vw;
+  gap: 1rem;
+  margin-top: 2vh;
+  padding: 0;
+}
+
+/* mobile heading */
+@media (max-width: 768px) {
+  .heading-content {
+    width: 90vw;
+  }
+}
+
+/* menu header */
+.menu-header {
+  width: 100%;
+  aspect-ratio: 517/68;
+  background-image: url('../Assets/tobo-photobooth/menupage/Header.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+}

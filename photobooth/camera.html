@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camera</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="Assets/tobo-photobooth/favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="StyleSheets/camera.css" />
+</head>
+<body>
+  <div class="heading">
+    <img src="Assets/tobo-photobooth/heading.png" alt="headingweb">
+  </div>
+  <div class="photobooth-container" id="booth">
+    <div class="lego-container"></div>
+    <div class="countdown-timer">3</div>
+    <canvas id="finalCanvas" width="1176" height="1870"></canvas>
+    <video id="liveVideo" autoplay playsinline muted></video>
+    <img class="frame-overlay" src="Assets/tobo-photobooth/camerapage/frametobo2.png" alt="frame overlay" />
+  </div>
+
+  <div class="controls">
+    <button id="takePhoto">Capture</button>
+    <button id="readyButton" disabled style="display: none;">Ready</button>
+  </div>
+
+  <script src="Javascripts/camera.js"></script>
+  <script src="Javascripts/legos.js"></script>
+</body>
+</html>

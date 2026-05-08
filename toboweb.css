@@ -22,6 +22,7 @@ body {
     align-items: center;
     max-width: 100%;
     margin: 0;
+    padding: 0;
 }
 
 
@@ -325,7 +326,7 @@ transform: scaleY(1.2);
   background-color: #fef10c; /* Kuning terang */
   position: relative;
   z-index: 20; 
-  top: 0;/* Supaya di atas background pilar merah */
+  /* Supaya di atas background pilar merah */
 }
 .label-container {
   margin-top: 0px; 
@@ -349,6 +350,7 @@ transform: scaleY(1.2);
 background-image: url('img/bg3.svg');
 display: flex;
 overflow: hidden;
+margin-bottom: 0;
 }
 
 
@@ -438,6 +440,242 @@ overflow: hidden;
     font-family: 'Arial';
 }
 
+/*card udah nih*/
+ /* Atur lebar seksi konten kamu */
+  
+#streams-section {
+  width: 100%;
+  height: 100vh; 
+  background-image: url('img/bg.png'); 
+  background-size: cover;
+  background-position: center; 
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center; 
+ 
+}
+.section-divider {
+  width: 100%;
+  height: 25px; /* Sesuaikan ketebalan garis di gambar */
+  background-color: #fef10c; /* Kuning terang */
+  position: relative;
+  z-index: 20; 
+/* Supaya di atas background pilar merah */
+}
+.label-container {
+  z-index: 30; /* Harus lebih tinggi dari divider dan video */
+  position: relative;
+}
+
+.stream-label {
+  width: 300px; /* Ukuran dari Figma */
+  height: auto;
+  display: block;
+  
+}
+
+.main-board {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.streams-content {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  position: relative;
+  padding-top: 100px;
+  /* Margin kiri-kanan dihapus biar kotaknya gak saling menjauh */
+}
+
+.stream-box {
+  width: 450px; 
+  height: auto;
+  position: center;
+  z-index: 1; 
+  cursor: pointer;
+  transition: transform 0.2s ease; 
+}
+
+.stream-box:hover {
+  transform: scale(1.05);
+}
+
+#mascot-goat {
+  width: 400px; 
+  height: auto;
+  position: relative;
+  z-index: 5; 
+  /* TARIKAN MINUSNYA DIGEDEIN BIAR MAKIN MEPET */
+  margin-left: -120px;  
+  margin-right: -120px; 
+  pointer-events: none; 
+}
+
+
+/*stremmmm dah*/
+/* ini ttg lecture*/
+#lecture-section {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-image: url('img/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  padding-top: 0px; 
+  padding-bottom: 0px;
+}
+
+.section-divider {
+  width: 100%;
+  height: 25px; /* Sesuaikan ketebalan garis di gambar */
+  background-color: #fef10c; /* Kuning terang */
+  position: relative;
+  z-index: 20; 
+  
+  /* Supaya di atas background pilar merah */
+}
+.label-container {
+  margin-top: 0px; 
+  z-index: 30; /* Harus lebih tinggi dari divider dan video */
+  position: relative;
+}
+
+.lecture-label {
+  width: 300px; /* Ukuran dari Figma */
+  height: auto;
+  display: block;
+  
+}
+
+.main-board {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.content-wrapper {
+  display: flex; 
+  justify-content: space-evenly; 
+  align-items: center; 
+  width: 100%;
+  max-width: 1200px; /* Biar kalau di layar gede banget card-nya gak terlalu misah */
+  padding: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; 
+}
+
+.profile-img, .partner-img { 
+  width: 360px;
+  height: auto;
+  filter: drop-shadow(0 5px 15px rgba(0,0,0,0.2)); 
+  transition: transform 0.2s ease; 
+  cursor: pointer;
+}
+.profile-img:hover, .partner-img:hover {
+  transform: scale(1.02); 
+}
+
+
+.divider-kuning {
+  width: 100%;    
+  height: auto;      
+  display: block;
+}
+/*photbut*/
+#camcam-section {
+  width: 100%;
+  min-height: 100vh; 
+  background-image: url('img/bg.png');
+  background-size: cover;
+  background-position: center;
+  position: relative; 
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start;
+  align-items: center; 
+  padding-top: 0px; 
+}
+.section-divider {
+  width: 100%;
+  height: 25px; /* Sesuaikan ketebalan garis di gambar */
+  background-color: #fef10c; /* Kuning terang */
+  position: relative;
+  z-index: 20; 
+  top: 0;/* Supaya di atas background pilar merah */
+}
+
+
+/* --- PENGATURAN GAMBAR CAMCAM --- */
+.camcam-img {
+  width: 100%;      
+  max-width: 400px; 
+  height: auto;
+  cursor: pointer; 
+  transition: transform 0.2s ease;
+  
+}
+  .camcam-img:hover {
+  transform: scale(1.02); 
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7); 
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.hidden {
+  display: none !important;
+}
+
+.modal2-content {
+  position: relative;
+  display: inline-block; 
+  max-width: 90%;
+  max-height: 90vh;
+}
+
+.info-img-target {
+  display: block;
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.close-btn {
+  position: absolute;
+  top: -14px;    
+  right: -10px;  
+  width: 40px; 
+  cursor: pointer;
+  z-index: 10000;
+  transition: transform 0.2s ease;
+}
+
+.close-btn:hover {
+  transform: scale(1.1);
+}
+
 /* Animasi Muncul */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-20px); }
@@ -463,7 +701,7 @@ overflow: hidden;
     border: 3px solid white;
 }
 
-/* Styling Teks Dalam Pop-up */
+
 #modal-title {
     color: #c00;
     text-decoration: underline;
@@ -509,30 +747,23 @@ overflow: hidden;
   font-size: 35px;
 }
 
-/*team ngezzz*/
+/* --- PENGATURAN SECTION FOOTER --- */
+#foot-section {
+  width: 100%;
+  height: auto; 
+  position: relative;
+  margin: 0;
+  padding: 0;
+} 
 
-
-
-/*team lese*/
-
-/*footeryey*/
-footer {
-    background-color: #2424ff;
-    text-align: center;
-    height: 3rem;
+/* --- PENGATURAN GAMBAR FOOTER --- */
+.foot-img {
+  width: 100%;      
+  height: auto;     
+  display: block;   
 }
 
-
-  footer .links a {
-      color: #ffffff;
-      padding: 1rem 1rem;
-      font-size: 2rem;
-      display: inline;
-      margin-top: 10px;
-      font-family: 'Arial';
-      font-weight: bold;
-      transform: translateY(1.2rem);
-  }
+/*footeryey*/
 @media (max-width: 768px) {
   .navbar-nav {
     position: fixed;
