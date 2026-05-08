@@ -100,7 +100,7 @@ const finalizePhotoStrip = () => {
   const { video, ctx, canvas } = elements;
   video.style.display = 'none';
   const frame = new Image();
-  frame.src = '../photobooth/Assets/tobo-photobooth/camerapage/frame.png';
+  frame.src = '../photobooth/Assets/tobo-photobooth/camerapage/frametobo2.png';
   const goNext = () => {
     try {
       localStorage.setItem('photoStrip', canvas.toDataURL('image/png'));
