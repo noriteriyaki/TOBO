@@ -727,7 +727,7 @@ margin-bottom: 0;
     letter-spacing: -0.3px;
     padding: 20px;
 }
-.tools-section{
+.tools-inline{
   display: flex;
   align-items: center; /* biar sejajar tengah */
   gap: 10px; /* jarak teks & icon */
@@ -738,7 +738,7 @@ margin-bottom: 0;
     width: 70px;
     margin-top: 7px;
 }
-.tools-section p{
+.tools-inline p{
   font-family: 'Arial';
   font-weight: bold;
   font-style: italic;
