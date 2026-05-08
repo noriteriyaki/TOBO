@@ -175,7 +175,7 @@ transform: scaleY(1.2);
   overflow: visible; /* Biar badge bisa nongol keluar dikit */
 }
 
-.video-wrapper video autoplay loop muted playsinline {
+.video-wrapper video {
   width: 100%;
   height: 100%;
   border-radius: 20px;
