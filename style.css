@@ -538,7 +538,7 @@ margin-bottom: 0;
 /* ini ttg lecture*/
 #lecture-section {
   width: 100%;
-  min-height: 100vh;
+  min-height: auto;
   position: relative;
   background-image: url('img/background.png');
   background-size: cover;
