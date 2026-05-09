@@ -917,5 +917,308 @@ margin-bottom: 0;
 .about-section{
     max-height: 40vh;
 }
+@media (max-width: 768px) {
+  .navbar-nav {
+    position: fixed;
+    top: 0;
+    right: -100%; /* awalnya disembunyiin */
+    height: 100vh;
+    width: 100px;
+    background: #fef10c;
+    flex-direction: column;
+    padding-top: 60px;
+    transition: 0.3s;
+  }
+  .navbar-nav.active {
+    right: 0; /* muncul dari kanan */
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+    .logo {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    /* 2. Segitiga: Kita buat bentuknya lebih lebar di mobile */
+    .atap {
+        height: 200px; /* Batasi tinggi hero di mobile */
+        background: #0000ff; /* Warna biru background */
+        display: flex;
+        justify-content: center;
+        align-items: flex-end; /* Taruh segitiga di bawah */
+    }
+
+    .atap-yellow {
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(0% 100%, 50% 45%, 100% 100%);
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0px;
+        right: 0px;
+        
+    }
+
+    /* 3. Teks di dalam Segitiga: Perkecil sizenya */
+    .hero-text {
+        font-size: 17px !important;
+        width: 90%;
+        margin-top: 120px; /* Dorong dikit ke bawah puncak segitiga */
+    }
+  .hero-container{
+  grid-template-columns: 20px 1fr 20px;
+  margin-top: 0;
+  height: 30vh;
+  }
+    /* 4. Pilar Merah: Buat sangat tipis di sisi layar */
+    .pillar-left {
+        width: 20px !important; 
+        background: linear-gradient(to right, #ffffff 2%, #ff0c29 95%);
+    }
+    .pillar-right{
+       width: 20px !important; 
+        background: linear-gradient(to left, #ffffff 2%, #ff0c29 95%);
+    
+    }
+    .main-content{
+      display: flex;
+      align-items: flex-start;
+      height: 30vh;
+  
+    }
+
+    .video-wrapper {
+        width: 85%;
+        height: auto;
+        aspect-ratio: 16 / 9; 
+        margin: 10px auto;
+        position: relative;
+        left: 0 !important;
+        transform: none !important;
+        top: 20px;
+    }
+
+    .tobo-badge {
+        width: 60px;
+        height: 60px;
+        font-size: 8px;
+        left: -15px;
+        top: 50px;
+    }
+    
+    
+  .section-divider {
+  width: 100%;
+  height: 25px; /* Sesuaikan ketebalan garis di gambar */
+  background-color: #fef10c; /* Kuning terang */
+  position: relative;
+  z-index: 999;
+  top: 0;
+   /* Supaya di atas background pilar merah */
+  }
+  .label-container{
+  left: 30%;
+  }
+  .tobo-svg-label{
+      width: 40%;
+    
+    }
+.about-section{
+    max-height: 5vh;
+    align-items: center;
+    display: block;
+    min-height: fit-content; 
+    background-size: cover;
+}
+  .maskot{
+      width: 30%;
+      margin-top: 5%;
+    }
+
+    .tobo-textbox img{
+      padding: 10px 5px;
+    margin-top: 5%;
+    margin-left: 140px; 
+    width: 53%;
+    }
+    .connector-dots {
+  position: absolute;
+  left: 38%;   /* geser sesuai posisi antara logo & textbox */
+  top: 70%;
+  transform: translate(-50%, -50%);
+}
+.dotsmall {
+  width: 10px;
+  height: 10px;
+  left: 0;
+  top: 0;
+}
+
+.dotbig {
+  width: 20px;
+  height: 20px;
+  left: 5px;  /* jarak antar bulatan */
+  top: 12px;   /* sedikit turun biar diagonal */
+}
+.pillarkiri {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 20px;
+  height: 100%;
+
+  background: linear-gradient(to right, #ffffff 3%, #ff0c29 98%);
+  z-index: 10;
+}
+
+.pillarkanan {
+  position: absolute;
+  top: 0;
+  right: 0px;
+
+  width: 20px;
+  height: 100%;
+
+  background: linear-gradient(to left, #ffffff 3%, #ff0c29 98%);
+  z-index: 99;
+}
+
+.galeri-label{
+  width: 40%;
+}
+.carousel-container{
+  width: 100%;
+  gap: 10px;
+  padding: 0;
+  grid-column: 1;
+  padding: 10px 2%;
+  display: flex;
+}
+.galeri{
+min-height: fit-content;
+background-size: cover;
+}
+.learning-card{
+  width: 50%;
+}
+.learning-card img{
+  width: 45%;
+}
+.learning-card h3{
+  font-size: 12px;
+}
+.learning-card p{
+  font-size: 10px;
+}
+
+.modal-content {
+    background: linear-gradient(to bottom, #ffffff, #ffcbcb);
+    padding: 30px;
+    border-radius: 25px;
+    width: 90%;
+    max-width: 200px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    animation: fadeIn 0.4s;
+    font-family: 'Arial';
+}
+.streams-content{
+  padding-top: 10px;
+}
+#streams-section{
+  height: fit-content;
+}
+
+.stream-label{
+ width: 40%;
+}
+
+.stream-box{
+  width: 40%;
+}
+#mascot-goat{
+  width: 40%;
+  margin-left: -50px;
+  margin-right: -50px;
+}
+#lecture-section{
+  height: fit-content;
+  padding: 0;
+}
+.content-wrapper{
+  max-width: 768px;
+  padding: 0;
+  margin-top: 10px;
+}
+.lecture-label{
+  width: 40%;
+}
+.profile-img, .partner-img{
+  width: 100px;
+}
+
+.card{
+  gap: 5px;
+  
+}
+
+#camcam-section{
+  height: fit-content;
+}
+
+.camcam-img{
+  margin-left: 90px;
+  max-width: 40%;
+
+}
+
+.modal{
+  width: 100%;
+}
+.modal2-content{
+  max-width: 90%;
+  
+}
+.info-img-target{
+  max-width: 40%;
+}
+.close-btn{
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  right: -40px;
+}
+
+
+#modal-title{
+  font-size: 18px;
+
+}
+
+#modal-subtitle{
+  font-size: 15px;
+  margin-top: 3px;
+}
+
+#modal-desc{
+  font-size: 10px;
+  padding: 5px;
+}
+
+.tools-icon{
+  width: 40%;
+}
+.tools-section p{
+  font-size: 15px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
 
 }
